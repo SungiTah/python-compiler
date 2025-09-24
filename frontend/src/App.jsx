@@ -16,7 +16,9 @@ function App() {
     setOutput([]);
     
     try {
-      const response = await fetch('http://localhost:8000/execute', {
+      // Use environment variable for API URL, fallback to localhost for development
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const response = await fetch(`${apiUrl}/execute`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

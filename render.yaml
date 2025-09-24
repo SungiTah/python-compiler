@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: python-compiler-api
+    env: python
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "python backend/api/app.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    healthCheckPath: /health
+    autoDeploy: true
