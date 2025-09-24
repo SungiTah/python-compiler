@@ -3,26 +3,29 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": ".",
+  "homepage": "https://SungiTah.github.io/python-compiler",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@monaco-editor/react": "^4.4.5",
     "axios": "^1.4.0",
-    "framer-motion": "^10.12.16"
+    "framer-motion": "^10.12.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@vitejs/plugin-react": "^5.0.3",
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.0",
-    "vite": "^4.2.0"
+    "vite": "^7.1.7"
   }
 }
