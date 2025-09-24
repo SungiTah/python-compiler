@@ -3,7 +3,7 @@ services:
     name: python-compiler-api
     env: python
     buildCommand: "pip install -r backend/requirements.txt"
-    startCommand: "python backend/api/app.py"
+    startCommand: "gunicorn backend.api.app:app"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
